@@ -11,6 +11,6 @@ class Browser(object):
     driver.set_page_load_timeout(40)
     driver.maximize_window()
 
-    def close(context):git
+    def close(context):
         context.driver.close()
 
