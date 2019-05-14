@@ -1,0 +1,5 @@
+reports
+geckodriver.log
+.idea/
+features/__pycache__/
+features/pages/__pycache__/
