@@ -11,6 +11,11 @@ def step_impl(context, enter_login):
     context.login_page.login(enter_login)
     assert_equal(context.login_page.get_page_title(), "Revelar Insights")
 
+@then('The practitioner dashboard is viewable')
+def step_impl(context):
+    raise NotImplementedError(u'STEP: Then The practitioner dashboard is viewable')
+    assert_equal(context.login_page.get_page_title(), "Revelar Insights")
+
 
 
 
