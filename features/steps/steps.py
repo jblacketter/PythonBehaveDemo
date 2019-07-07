@@ -1,5 +1,6 @@
 from nose.tools import assert_equal, assert_true
 from selenium.webdriver.common.by import By
+import time
 
 @step('The practitioner is on the Login page')
 def step_impl(context):
@@ -14,7 +15,6 @@ def step_impl(context, enter_login):
 @then('The practitioner dashboard is viewable')
 def step_impl(context):
     assert_equal(context.login_page.get_page_title(), "Revelar Insights")
-
 
 
 
