@@ -7,7 +7,7 @@ class Browser(object):
     chrome_options = webdriver.ChromeOptions()
     chrome_options.add_argument('--headless')
 
-    driver = webdriver.Chrome(chrome_options=chrome_options)
+    driver = webdriver.Chrome(chrome_options=chrome_options, service_args=['--verbose', '--log-path=/tmp/chromedriver.log'])
     driver.implicitly_wait(30)
     driver.set_page_load_timeout(30)
     driver.maximize_window()
