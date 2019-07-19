@@ -1,6 +1,3 @@
-@practitioner
-@TF32
-
 Feature: LocationsComponent
 
 Background: Verify that practitioner User is able to login
@@ -8,8 +5,7 @@ Background: Verify that practitioner User is able to login
     And user enters username and password and clicks Login button
     Then home page is displayed
 
-@regression @TC158 @batch2
-Scenario: Verify some fields are mandatory on Add Location form
+  Scenario: Verify some fields are mandatory on Add Location form
     When a practitioner is in the settings page
     #And user go on location and device tab
     And user go on location and device tab page
@@ -21,8 +17,7 @@ Scenario: Verify some fields are mandatory on Add Location form
     | Address         | Address is required.        |
     | Location phone  | Location Phone is required. |
 
-@regression @TC157 @TC158 @batch1
-Scenario: Create new Location
+  Scenario: Create new Location
     When a practitioner is in the settings page
     #And user go on location and device tab
     And user go on location and device tab page
@@ -37,8 +32,7 @@ Scenario: Create new Location
     And user clicks on Submit on add location form
     And verify that location is created
 
-@regression @TC159 @batch1
-Scenario: Edit Existing location
+  Scenario: Edit Existing location
     When a practitioner is in the settings page
     #And user go on location and device tab
     And user go on location and device tab page
@@ -52,17 +46,17 @@ Scenario: Edit Existing location
     And user clicks on Submit on add location form
     And verify that location is updated
 
-@regression @TC161 @batch1
-Scenario: Verify that practitioner is able to remove existing location
-  When a practitioner is in the settings page
-  #And user go on location and device tab
-  And user go on location and device tab page
-  And user save the first location
-  And user click the edit button for an existing location
-  And user click on Delete Location on edit form
-  Then verify that location is removed
 
-  @inprogress @TC160 @batch1
+  Scenario: Verify that practitioner is able to remove existing location
+    When a practitioner is in the settings page
+    #And user go on location and device tab
+    And user go on location and device tab page
+    And user save the first location
+    And user click the edit button for an existing location
+    And user click on Delete Location on edit form
+    Then verify that location is removed
+
+
   Scenario: verify that user is able to Edit Location negative cases
     When a practitioner is in the settings page
     #And user go on location and device tab

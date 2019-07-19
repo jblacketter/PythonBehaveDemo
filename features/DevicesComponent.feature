@@ -8,7 +8,6 @@ Background: Verify that practitioner User is able to login
     And user enters username and password and clicks Login button
     Then home page is displayed
 
-@regression @TC164 @batch2
 Scenario: Verify that a practitioner cannot add a device with wrong pin
     When a practitioner is in the settings page
     #And user go on location and device tab
@@ -18,7 +17,6 @@ Scenario: Verify that a practitioner cannot add a device with wrong pin
     And user clicks next on add device form
     Then verify that pin is wrong
 
-@regression @TC164 @batch2
 Scenario: Verify some fields are manadatory on add device form
     When a practitioner is in the settings page
     #And user go on location and device tab
@@ -29,7 +27,6 @@ Scenario: Verify some fields are manadatory on add device form
     | field      | message                 |
     | Device PIN | Device Pin is required. |
 
-@regression @TC167 @batch1
 Scenario: Verify that a practitioner can edit details on add device form
     When a practitioner is in the settings page
     #And user go on location and device tab
@@ -42,7 +39,6 @@ Scenario: Verify that a practitioner can edit details on add device form
     And user clicks on Edit Device
     Then verify that location added to the device
 
- @regression @TC162 @batch1
  Scenario: Verify that user is able to add device without location 
     When a practitioner is in the settings page
     And user go on location and device tab page
@@ -53,7 +49,6 @@ Scenario: Verify that a practitioner can edit details on add device form
     And user click on skip button
     And Verify that user is able to add device without location    
 
- @regression @TC163
 Scenario: Verify that practitioner can add device with a new pin
     When a practitioner is in the settings page
     #And user go on location and device tab
@@ -65,7 +60,6 @@ Scenario: Verify that practitioner can add device with a new pin
     #Then verify that device is added
     Then verify that deviceId is added using new pin in Location and Device page 
 
- @TC166 @regression
 Scenario: Verify that user is able to Edit Device negative cases
     When a practitioner is in the settings page
     And user go on location and device tab page
@@ -73,7 +67,6 @@ Scenario: Verify that user is able to Edit Device negative cases
     And user clear the Location field
     Then verify that user is not able click save btn 
 
- @regression @TC165 @batch1
  Scenario: Verify that user is able to Unpair Device
     When a practitioner is in the settings page
     And user go on location and device tab page

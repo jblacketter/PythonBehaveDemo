@@ -1,6 +1,4 @@
 from selenium import webdriver
-import os
-import time
 
 class Browser(object):
 
@@ -19,6 +17,4 @@ class Browser(object):
 
     def close(context):
         context.driver.close()
-
-
 

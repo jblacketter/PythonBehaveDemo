@@ -3,15 +3,14 @@
 
 Feature: GlobalSearch
 
-Background: Verify that practitioner User is able to login
-    Given practitioner is on Login page
-    And user enters username and password and clicks Login button
-    Then home page is displayed
+    Background: Verify that practitioner User is able to login
+        Given practitioner is on Login page
+        And user enters username and password and clicks Login button
+        Then home page is displayed
 
-@regression @TC73 @batch1
-Scenario: Verify that a practitioner can search for patients
-    When copy patient from local file
-    And a practitioner is in the patients page
+    Scenario: Verify that a practitioner can search for patients
+        When copy patient from local file
+        And a practitioner is in the patients page
     # When a practitioner performs a full text search for a patient
     #     | Search Text           | Search Filter            |
     #     | First                 | Only My Patients         |
@@ -27,7 +26,6 @@ Scenario: Verify that a practitioner can search for patients
         | Lname                 | Patients of my practice  |
     Then the results should be filtered with all items matching the partial search
 
-@regression @TC140 @batch1
 Scenario: Verify that a practitioner can search for patient using search function
     When copy patient from local file
     And user seacrh for the patient on search feature

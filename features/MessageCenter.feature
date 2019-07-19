@@ -1,6 +1,3 @@
-@practitioner
-@TF43
-
 Feature: MessageCenter
 
 Background: Verify that practitioner User is able to login
@@ -8,8 +5,7 @@ Background: Verify that practitioner User is able to login
     And user enters username and password and clicks Login button
     Then home page is displayed
 
-@regression @TC54 @TC29 @batch2
-Scenario: Verify some fields are manadatory on Create message form
+  Scenario: Verify some fields are manadatory on Create message form
     When a practitioner is in the Message Center page
     And user clicks on Compose
     And user clicks send button on create message form
@@ -20,8 +16,7 @@ Scenario: Verify some fields are manadatory on Create message form
     # | Message    | 500 characters left     |
    # | Message    | Message is required.    | 
 
-@regression @TC8 @TC197 @batch1
-Scenario: Verify that a practitioner can send message
+  Scenario: Verify that a practitioner can send message
     And copy patient from local file
     When a practitioner is in the Message Center page
     And user clicks on Compose
@@ -30,29 +25,24 @@ Scenario: Verify that a practitioner can send message
     And user clicks on Sent tab
     Then verify that message is sent
 
-@regression @TC54 @TC42 @batch1
-Scenario: Verify that a practitioner can see sent messages
+  Scenario: Verify that a practitioner can see sent messages
     And copy patient from local file
     When a practitioner is in the Message Center page
     And user clicks on Sent tab
 
-@regression @TC54 @TC42 @batch1
-Scenario: Verify that a practitioner can see draft messages
+  Scenario: Verify that a practitioner can see draft messages
     When a practitioner is in the Message Center page
     And user clicks on Draft tab
 
-@regression @TC54 @TC42 @batch1
-Scenario: Verify that a practitioner can see starred messages
+  Scenario: Verify that a practitioner can see starred messages
     When a practitioner is in the Message Center page
     And user clicks on Starred tab
 
-@regression @TC54 @TC42 @TC199 @batch1
-Scenario: Verify that a practitioner can see trash messages
+  Scenario: Verify that a practitioner can see trash messages
     When a practitioner is in the Message Center page
     And user clicks on Trash tab
 
-@regression @batch1
-Scenario: verify that a practitioner can save message as a draft
+  Scenario: verify that a practitioner can save message as a draft
     And copy patient from local file
     When a practitioner is in the Message Center page
     And user clicks on Compose
@@ -62,8 +52,7 @@ Scenario: verify that a practitioner can save message as a draft
     And user clicks on Draft tab
     Then verfiy that messages is saved in Draft section
 
-@regression @TC15 @batch1
-Scenario: Verify that a practitioner can delete messgaes
+  Scenario: Verify that a practitioner can delete messgaes
    When a practitioner is in the Message Center page
    And practitioner selects a message
    And practitioner clicks on trash icon
@@ -72,8 +61,7 @@ Scenario: Verify that a practitioner can delete messgaes
    #Then verfiy that message added to the Trash section
    Then verify that message is deleted from inbox section
 
-@regression @TC199 @TC191 @batch1
-Scenario: verify that a practitioner can restore from trash
+  Scenario: verify that a practitioner can restore from trash
     When a practitioner is in the Message Center page
     And user clicks on Trash tab
     #And patient selects a message
@@ -81,8 +69,7 @@ Scenario: verify that a practitioner can restore from trash
     And practitioner clicks restore button
     Then verfiy that message removed from the Trash section
 
- @regression @TC191 @batch1
-Scenario: verify that a practitioner can delete from trash
+  Scenario: verify that a practitioner can delete from trash
     When a practitioner is in the Message Center page
     And user clicks on Trash tab
     #And patient selects a message
@@ -90,25 +77,22 @@ Scenario: verify that a practitioner can delete from trash
     And practitioner click empty trash button
     Then verfiy that message removed from the Trash section
 
-@regression @TC14 @batch1
-Scenario: verify that a practitioner can add & remove star
+  Scenario: verify that a practitioner can add & remove star
     When a practitioner is in the Message Center page
     And practitioner clicks star
     And practitioner removes star
 
- @regression @TC31 @batch1
  Scenario: verify that a practitioner can nevigate to older and newer messages
      When a practitioner is in the Message Center page
      And practitioner clicks on older button
      And practitioner clicks on newer button
 
-@regression @batch1
-Scenario: verify that practitioner can select all
+
+  Scenario: verify that practitioner can select all
     When a practitioner is in the Message Center page
     And practitioner clicks Select All
 
-@regression @batch1 @inprogress
-Scenario: verify that a practitioner can cancel delete message
+  Scenario: verify that a practitioner can cancel delete message
     When a practitioner is in the Message Center page
     And practitioner selects a message
     And practitioner clicks on trash icon
@@ -116,8 +100,7 @@ Scenario: verify that a practitioner can cancel delete message
     Then verfiy that message present in inbox
     #Then verfiy that message not removed from the Trash section
 
-@regression @TC54 @batch1
-Scenario: verify that practitioner can search sent messages in sent box   
+  Scenario: verify that practitioner can search sent messages in sent box
     When a practitioner is in the Message Center page
     And user clicks on Compose
     And user enter message details on create message form
@@ -125,8 +108,7 @@ Scenario: verify that practitioner can search sent messages in sent box
     And user clicks on Sent tab
     And verify that practitioner can search sent messages in sent box
 
-@regression @TC12 @batch1
-Scenario: verify that practitioner can send a saved draft message
+  Scenario: verify that practitioner can send a saved draft message
     And copy patient from local file
     When a practitioner is in the Message Center page
     And user clicks on Compose
@@ -139,8 +121,7 @@ Scenario: verify that practitioner can send a saved draft message
     And user clicks on Sent tab
     And verify that practitioner can search sent messages in sent box
 
-@regression @TC16 @batch2
-Scenario: verify that practitioner can search messages in inbox
+  Scenario: verify that practitioner can search messages in inbox
     When a practitioner is in the Message Center page
     And practitioner search message in inbox by Subject
     |Subject                |
