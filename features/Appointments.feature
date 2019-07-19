@@ -73,9 +73,9 @@ Feature: Appointments
     #And  there are no appointments scheduled for the patient
     Then verify that the Next appointment widget displays "You do not have any scheduled appointments"
 
-  Scenario: verify that user is able to shedule appointment through plus icon
+  Scenario: A practitioner should be able to schedule appointment through plus icon
     When a practitioner is on the dashboard page
-     #When clicks on plus icon on dashboard for shedule appointment
+     #When clicks on plus icon on dashboard for schedule appointment
     And clicks on Appointment icon on dashboard
     And clicks on Plus icon on view Appointments section
     And enter values on schedule appointment form
@@ -83,23 +83,24 @@ Feature: Appointments
     Then clicks on Submit button
     Then verify that user Sheduled appointment
 
-  Scenario: As a practitioner I should be able to navigate to patient record through the appointment link
+  Scenario: A practitioner should be able to navigate to patient record through the appointment link
     When a practitioner is on the dashboard page
     And there are appointments scheduled for the patient
     And a practitioner clicks the patient name under Upcoming Appointments
     Then verify that the link navigates to the patient record
 
-  Scenario: verify that user is able to shedule appointment on view appointment page without select mandatory fields
+  Scenario: A practitioner should be able to shedule appointment on view appointment page without select mandatory fields
     Then clicks on Appointment icon on dashboard
     And clicks on Plus icon on view Appointments section
     Then clicks on Submit button
-    And verify that user is able to shedule appointment on view appointment page without select mandatory fields
+    And verify that user is able to schedule appointment on view appointment page without select mandatory fields
       | field            | message               |
       | Patient          | Patient is required.  |
       | Location         | Location is required. |
       | Reason for Visit | 50 characters left    |
 
-  Scenario: verify that user is able to cancel appointment
+# this may be overlapping with scenario below
+  Scenario: A practitioner should be able to cancel appointment
     And clicks on upcoming appointment icon
     #And verify that user is able to view Appointments Page through Eye icon with upcomming appointments on home page
     And clicks on Plus icon on view Appointments section
@@ -110,7 +111,7 @@ Feature: Appointments
     And verify that the appointment is scheduled through the eye button
     And verify that user able to cancel Appointment
 
-  Scenario: verify that practitioner can set appointment,modify appointment and remove appointment
+  Scenario: A practitioner can create modify and remove appointment
     Given a practitioner is in the patients page
     # we need test data for the patient name to search
     When a practitioner searches for the patient
@@ -132,9 +133,9 @@ Feature: Appointments
     And user removes the appointment
     Then verify that appointment is removed
 
-  Scenario: verify that a practitioner can book an appointment
+  Scenario: A practitioner can book an appointment
     When a practitioner clicks on patients page
-    And copy patient data and search for the patient
+    # we need to get test data in her for the search
     And on next Appointment Icon
     And clicks on Schedule Test Icon
     Then enters values on appointment form
