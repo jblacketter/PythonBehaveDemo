@@ -89,7 +89,7 @@ Feature: Appointments
     And a practitioner clicks the patient name under Upcoming Appointments
     Then verify that the link navigates to the patient record
 
-  Scenario: A practitioner should be able to shedule appointment on view appointment page without select mandatory fields
+  Scenario: A practitioner should be able to schedule appointment on view appointment page without select mandatory fields
     Then clicks on Appointment icon on dashboard
     And clicks on Plus icon on view Appointments section
     Then clicks on Submit button
