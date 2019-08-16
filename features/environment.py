@@ -1,7 +1,7 @@
 from selenium import webdriver
 from features.browser import Browser
-from features.pages.login_page import LoginPage
-from features.pages.login_page import LoginPageLocator
+from features.pages.LoginPage import LoginPage
+from features.pages.LoginPage import LoginPageLocator
 
 def before_all(context):
     context.browser = Browser()
