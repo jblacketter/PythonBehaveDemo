@@ -14,5 +14,5 @@ To Run
     'behave features\<featurename>'
 
 For example 
-    'behave features\Dashboard.feature'
+    'behave features\Appointments.feature'
 
