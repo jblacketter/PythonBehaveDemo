@@ -1,2 +1,0 @@
-mystrlen = len("hello world")
-

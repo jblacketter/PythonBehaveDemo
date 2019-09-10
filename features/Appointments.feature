@@ -2,7 +2,7 @@ Feature: Appointments
 
   Background: The practitioner logs in to the portal
     Given a practitioner is on the login page
-    When user enters "revboomdoom@dispostable.com"
+    When user enters a practitioner account
     Then Dashboard page is displayed
 
   Scenario: The practitioner can only set an appointment for future time

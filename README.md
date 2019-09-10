@@ -8,6 +8,10 @@ The initial version of this project was based on NodeJS with typescript using Cu
 The advantage gherkin format was to make the test cases more readable to a wider audience. 
 
 # Getting Started
+Defaults to local chrome browser. 
+
+Instructions for using selenium grid (link to selenium grid project using Docker-compose)
+
 
 # Build and Test
 To Run  
@@ -15,4 +19,6 @@ To Run
 
 For example 
     'behave features\Appointments.feature'
+    
+ 
 
