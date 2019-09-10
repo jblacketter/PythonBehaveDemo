@@ -3,7 +3,7 @@ from selenium import webdriver
 class Browser(object):
 
     chrome_options = webdriver.ChromeOptions()
-    chrome_options.add_argument('--headless')
+    # chrome_options.add_argument('--headless')
 
     driver = webdriver.Chrome(chrome_options=chrome_options, service_args=['--verbose', '--log-path=/tmp/chromedriver.log'])
     driver.implicitly_wait(30)

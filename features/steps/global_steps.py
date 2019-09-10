@@ -2,7 +2,7 @@ from nose.tools import assert_equal, assert_true
 from selenium.webdriver.common.by import By
 import time
 
-@step('a practitioner is on the login page')
+@given('The practitioner is on the login page')
 def step_impl(context):
     context.login_page.navigate("https://revelar-qa-portal-practitioner.azurewebsites.net/login")
     assert_equal(context.login_page.get_page_title(), "Revelar Insights")

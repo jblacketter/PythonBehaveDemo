@@ -1,0 +1,2 @@
+mystrlen = len("hello world")
+
